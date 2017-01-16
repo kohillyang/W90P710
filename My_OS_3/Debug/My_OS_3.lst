@@ -1,0 +1,1315 @@
+
+My_OS_3.elf:     file format elf32-littlearm
+My_OS_3.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x0000026d
+
+Program Header:
+    LOAD off    0x00008000 vaddr 0x00000000 paddr 0x00000000 align 2**15
+         filesz 0x0000089c memsz 0x0000089c flags r-x
+    LOAD off    0x00010000 vaddr 0x20000000 paddr 0x0000089c align 2**15
+         filesz 0x00000006 memsz 0x0000048c flags rw-
+private flags = 5000202: [Version5 EABI] [soft-float ABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .text         0000089c  00000000  00000000  00008000  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000006  20000000  0000089c  00010000  2**2  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000484  20000008  000008a4  00010006  2**2  ALLOC
+  3 .debug_info   00000912  00000000  00000000  00010006  2**0  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 000004f6  00000000  00000000  00010918  2**0  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000188  00000000  00000000  00010e10  2**3  CONTENTS, READONLY, DEBUGGING
+  6 .debug_ranges 000000f8  00000000  00000000  00010f98  2**0  CONTENTS, READONLY, DEBUGGING
+  7 .debug_macro  0000e8c9  00000000  00000000  00011090  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001205  00000000  00000000  0001f959  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000444e7  00000000  00000000  00020b5e  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .comment      0000009b  00000000  00000000  00065045  2**0  CONTENTS, READONLY
+ 11 .ARM.attributes 00000037  00000000  00000000  000650e0  2**0  CONTENTS, READONLY
+ 12 .debug_frame  00000398  00000000  00000000  00065118  2**2  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+20000000 l    d  .data	00000000 .data
+20000008 l    d  .bss	00000000 .bss
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 startup_gcc.c
+000002e8 l     F .text	00000006 NmiSR
+000002f0 l     F .text	00000006 FaultISR
+000002f8 l     F .text	00000006 IntDefaultHandler
+20000000 l     O .data	00000004 pspstackTop
+000002ac l     F .text	00000000 zero_loop
+00000000 l    df *ABS*	00000000 getSp.c
+00000000 l    df *ABS*	00000000 ./src/interrupt_timer.o
+00000000 l    df *ABS*	00000000 led.c
+00000000 l    df *ABS*	00000000 systick.c
+00000000 l    df *ABS*	00000000 task.c
+20000004 l     O .data	00000001 _islight.4737
+20000005 l     O .data	00000001 _islight.4741
+00000000 l    df *ABS*	00000000 task_add.c
+00000000 l    df *ABS*	00000000 main.c
+20000008 l     O .bss	00000001 isOpen.4729
+00000000 l    df *ABS*	00000000 interrupt.c
+00000000 l    df *ABS*	00000000 sysctl.c
+00000830 l     O .text	0000006c g_pui32Xtals
+00000000 l    df *ABS*	00000000 systick.c
+00000000 l    df *ABS*	00000000 cpu.c
+00000000 l    df *ABS*	00000000 
+00000000 l       *UND*	00000000 task1_sp
+00000000 l       *UND*	00000000 task4_sp
+00000000 l       *UND*	00000000 task3_sp
+00000000 l       *UND*	00000000 taskSwitchAsm
+00000000 l       *UND*	00000000 task2_sp
+00000400 l       *ABS*	00000000 stacksize
+00000000 l     F *UND*	00000000 getPspTop
+0000089c g       .text	00000000 _etext
+2000018c g     O .bss	00000100 task2_stack
+2000028c g     O .bss	00000100 task3_stack
+000005bc g     F .text	00000034 setTask2
+00000300 g     F .text	000000a8 getNextSp
+00000454 g     F .text	00000034 SystickInit
+00000624 g     F .text	0000002c Led_handler
+0000040c g     F .text	00000024 ledOpen
+000005f0 g     F .text	00000034 setTask3
+2000048c g       .bss	00000000 _ebss
+000003a8 g     F .text	00000000 SysTick_handler
+20000008 g       .bss	00000000 _bss
+0000081c g     F .text	0000000c SysTickPeriodSet
+00000000 g       .text	00000000 _text
+2000038c g     O .bss	00000100 task1_stack
+00000650 g     F .text	00000040 main
+000006a0 g     F .text	0000015c SysCtlClockGet
+00000488 g     F .text	0000002c delay
+00000690 g     F .text	0000000e IntMasterEnable
+00000430 g     F .text	00000024 ledClose
+20000000 g       .data	00000000 _data
+000003d0 g     F .text	0000003c led_init
+2000000c g     O .bss	00000100 pui32Stack
+2000010c g     O .bss	00000080 pspstack
+20000006 g       .data	00000000 _edata
+00000000 g     O .text	0000026c g_pfnVectors
+0000026c g     F .text	00000070 ResetISR
+00000588 g     F .text	00000034 setTask1
+00000828 g     F .text	00000008 CPUcpsie
+0000057c g     F .text	0000000c led3_task
+00000518 g     F .text	00000064 led2_task
+000007fc g     F .text	00000010 SysTickEnable
+0000080c g     F .text	00000010 SysTickIntEnable
+000004b4 g     F .text	00000064 led1_task
+
+
+
+Disassembly of section .text:
+
+00000000 <_text>:
+$d():
+   0:	2000010b 	.word	0x2000010b
+   4:	0000026d 	.word	0x0000026d
+   8:	000002e9 	.word	0x000002e9
+   c:	000002f1 	.word	0x000002f1
+  10:	000002f9 	.word	0x000002f9
+  14:	000002f9 	.word	0x000002f9
+  18:	000002f9 	.word	0x000002f9
+	...
+  2c:	000002f9 	.word	0x000002f9
+  30:	000002f9 	.word	0x000002f9
+  34:	00000000 	.word	0x00000000
+  38:	000002f9 	.word	0x000002f9
+  3c:	000003a9 	.word	0x000003a9
+  40:	000002f9 	.word	0x000002f9
+  44:	000002f9 	.word	0x000002f9
+  48:	000002f9 	.word	0x000002f9
+  4c:	000002f9 	.word	0x000002f9
+  50:	000002f9 	.word	0x000002f9
+  54:	000002f9 	.word	0x000002f9
+  58:	000002f9 	.word	0x000002f9
+  5c:	000002f9 	.word	0x000002f9
+  60:	000002f9 	.word	0x000002f9
+  64:	000002f9 	.word	0x000002f9
+  68:	000002f9 	.word	0x000002f9
+  6c:	000002f9 	.word	0x000002f9
+  70:	000002f9 	.word	0x000002f9
+  74:	000002f9 	.word	0x000002f9
+  78:	000002f9 	.word	0x000002f9
+  7c:	000002f9 	.word	0x000002f9
+  80:	000002f9 	.word	0x000002f9
+  84:	000002f9 	.word	0x000002f9
+  88:	000002f9 	.word	0x000002f9
+  8c:	000002f9 	.word	0x000002f9
+  90:	000002f9 	.word	0x000002f9
+  94:	000002f9 	.word	0x000002f9
+  98:	000002f9 	.word	0x000002f9
+  9c:	000002f9 	.word	0x000002f9
+  a0:	000002f9 	.word	0x000002f9
+  a4:	000002f9 	.word	0x000002f9
+  a8:	000002f9 	.word	0x000002f9
+  ac:	000002f9 	.word	0x000002f9
+  b0:	000002f9 	.word	0x000002f9
+  b4:	000002f9 	.word	0x000002f9
+  b8:	000002f9 	.word	0x000002f9
+  bc:	000002f9 	.word	0x000002f9
+  c0:	000002f9 	.word	0x000002f9
+  c4:	000002f9 	.word	0x000002f9
+  c8:	000002f9 	.word	0x000002f9
+  cc:	000002f9 	.word	0x000002f9
+  d0:	000002f9 	.word	0x000002f9
+  d4:	000002f9 	.word	0x000002f9
+  d8:	000002f9 	.word	0x000002f9
+  dc:	000002f9 	.word	0x000002f9
+  e0:	000002f9 	.word	0x000002f9
+	...
+  ec:	000002f9 	.word	0x000002f9
+  f0:	000002f9 	.word	0x000002f9
+  f4:	000002f9 	.word	0x000002f9
+  f8:	000002f9 	.word	0x000002f9
+  fc:	000002f9 	.word	0x000002f9
+ 100:	000002f9 	.word	0x000002f9
+ 104:	000002f9 	.word	0x000002f9
+ 108:	000002f9 	.word	0x000002f9
+ 10c:	000002f9 	.word	0x000002f9
+	...
+ 118:	000002f9 	.word	0x000002f9
+ 11c:	000002f9 	.word	0x000002f9
+ 120:	000002f9 	.word	0x000002f9
+ 124:	000002f9 	.word	0x000002f9
+ 128:	000002f9 	.word	0x000002f9
+ 12c:	000002f9 	.word	0x000002f9
+ 130:	000002f9 	.word	0x000002f9
+ 134:	000002f9 	.word	0x000002f9
+ 138:	000002f9 	.word	0x000002f9
+ 13c:	000002f9 	.word	0x000002f9
+	...
+ 150:	000002f9 	.word	0x000002f9
+ 154:	000002f9 	.word	0x000002f9
+ 158:	000002f9 	.word	0x000002f9
+ 15c:	000002f9 	.word	0x000002f9
+	...
+ 1b0:	000002f9 	.word	0x000002f9
+ 1b4:	000002f9 	.word	0x000002f9
+ 1b8:	000002f9 	.word	0x000002f9
+ 1bc:	000002f9 	.word	0x000002f9
+ 1c0:	000002f9 	.word	0x000002f9
+ 1c4:	000002f9 	.word	0x000002f9
+ 1c8:	000002f9 	.word	0x000002f9
+ 1cc:	000002f9 	.word	0x000002f9
+ 1d0:	000002f9 	.word	0x000002f9
+ 1d4:	000002f9 	.word	0x000002f9
+ 1d8:	000002f9 	.word	0x000002f9
+ 1dc:	000002f9 	.word	0x000002f9
+ 1e0:	000002f9 	.word	0x000002f9
+ 1e4:	000002f9 	.word	0x000002f9
+ 1e8:	000002f9 	.word	0x000002f9
+	...
+ 1f4:	000002f9 	.word	0x000002f9
+ 1f8:	000002f9 	.word	0x000002f9
+ 1fc:	000002f9 	.word	0x000002f9
+ 200:	000002f9 	.word	0x000002f9
+ 204:	000002f9 	.word	0x000002f9
+	...
+ 210:	000002f9 	.word	0x000002f9
+ 214:	000002f9 	.word	0x000002f9
+ 218:	000002f9 	.word	0x000002f9
+ 21c:	000002f9 	.word	0x000002f9
+ 220:	000002f9 	.word	0x000002f9
+ 224:	000002f9 	.word	0x000002f9
+ 228:	000002f9 	.word	0x000002f9
+ 22c:	000002f9 	.word	0x000002f9
+ 230:	000002f9 	.word	0x000002f9
+ 234:	000002f9 	.word	0x000002f9
+ 238:	000002f9 	.word	0x000002f9
+ 23c:	000002f9 	.word	0x000002f9
+ 240:	000002f9 	.word	0x000002f9
+ 244:	000002f9 	.word	0x000002f9
+ 248:	000002f9 	.word	0x000002f9
+ 24c:	000002f9 	.word	0x000002f9
+ 250:	000002f9 	.word	0x000002f9
+ 254:	000002f9 	.word	0x000002f9
+ 258:	000002f9 	.word	0x000002f9
+ 25c:	000002f9 	.word	0x000002f9
+ 260:	000002f9 	.word	0x000002f9
+ 264:	000002f9 	.word	0x000002f9
+ 268:	000002f9 	.word	0x000002f9
+
+0000026c <ResetISR>:
+ResetISR():
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:261
+//*****************************************************************************
+
+static uint32_t pspstackTop = (uint32_t)(pspstack+31);
+void
+ResetISR(void)
+{
+ 26c:	b580      	push	{r7, lr}
+ 26e:	b082      	sub	sp, #8
+ 270:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:268
+
+
+    //
+    // Copy the data segment initializers from flash to SRAM.
+    //
+    pui32Src = &_etext;
+ 272:	4b16      	ldr	r3, [pc, #88]	; (2cc <zero_loop+0x20>)
+ 274:	607b      	str	r3, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:269
+    for(pui32Dest = &_data; pui32Dest < &_edata; )
+ 276:	4b16      	ldr	r3, [pc, #88]	; (2d0 <zero_loop+0x24>)
+ 278:	603b      	str	r3, [r7, #0]
+ 27a:	e007      	b.n	28c <ResetISR+0x20>
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:271
+    {
+        *pui32Dest++ = *pui32Src++;
+ 27c:	683b      	ldr	r3, [r7, #0]
+ 27e:	1d1a      	adds	r2, r3, #4
+ 280:	603a      	str	r2, [r7, #0]
+ 282:	687a      	ldr	r2, [r7, #4]
+ 284:	1d11      	adds	r1, r2, #4
+ 286:	6079      	str	r1, [r7, #4]
+ 288:	6812      	ldr	r2, [r2, #0]
+ 28a:	601a      	str	r2, [r3, #0]
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:269 (discriminator 1)
+
+    //
+    // Copy the data segment initializers from flash to SRAM.
+    //
+    pui32Src = &_etext;
+    for(pui32Dest = &_data; pui32Dest < &_edata; )
+ 28c:	683b      	ldr	r3, [r7, #0]
+ 28e:	4a11      	ldr	r2, [pc, #68]	; (2d4 <zero_loop+0x28>)
+ 290:	4293      	cmp	r3, r2
+ 292:	d3f3      	bcc.n	27c <ResetISR+0x10>
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:277
+    }
+
+    //
+    // Zero fill the bss segment.
+    //
+    __asm(
+ 294:	4811      	ldr	r0, [pc, #68]	; (2dc <zero_loop+0x30>)
+ 296:	6800      	ldr	r0, [r0, #0]
+ 298:	f380 8809 	msr	PSP, r0
+ 29c:	f04f 0002 	mov.w	r0, #2
+ 2a0:	f380 8814 	msr	CONTROL, r0
+ 2a4:	480e      	ldr	r0, [pc, #56]	; (2e0 <zero_loop+0x34>)
+ 2a6:	490f      	ldr	r1, [pc, #60]	; (2e4 <zero_loop+0x38>)
+ 2a8:	f04f 0200 	mov.w	r2, #0
+
+000002ac <zero_loop>:
+ 2ac:	4288      	cmp	r0, r1
+ 2ae:	bfb8      	it	lt
+ 2b0:	f840 2b04 	strlt.w	r2, [r0], #4
+ 2b4:	dbfa      	blt.n	2ac <zero_loop>
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:305
+    // APIs must be done here prior to the floating-point unit being enabled.
+    //
+    // Note that this does not use DriverLib since it might not be included in
+    // this project.
+    //
+    HWREG(NVIC_CPAC) = ((HWREG(NVIC_CPAC) &
+ 2b6:	4a08      	ldr	r2, [pc, #32]	; (2d8 <zero_loop+0x2c>)
+ 2b8:	4b07      	ldr	r3, [pc, #28]	; (2d8 <zero_loop+0x2c>)
+ 2ba:	681b      	ldr	r3, [r3, #0]
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:307
+                         ~(NVIC_CPAC_CP10_M | NVIC_CPAC_CP11_M)) |
+                        NVIC_CPAC_CP10_FULL | NVIC_CPAC_CP11_FULL);
+ 2bc:	f443 0370 	orr.w	r3, r3, #15728640	; 0xf00000
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:305
+    // APIs must be done here prior to the floating-point unit being enabled.
+    //
+    // Note that this does not use DriverLib since it might not be included in
+    // this project.
+    //
+    HWREG(NVIC_CPAC) = ((HWREG(NVIC_CPAC) &
+ 2c0:	6013      	str	r3, [r2, #0]
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:312
+                        NVIC_CPAC_CP10_FULL | NVIC_CPAC_CP11_FULL);
+
+    //
+    // Call the application's entry point.
+    //
+    main();
+ 2c2:	f000 f9c5 	bl	650 <main>
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:313
+}
+ 2c6:	3708      	adds	r7, #8
+ 2c8:	46bd      	mov	sp, r7
+ 2ca:	bd80      	pop	{r7, pc}
+ 2cc:	0000089c 	.word	0x0000089c
+ 2d0:	20000000 	.word	0x20000000
+ 2d4:	20000006 	.word	0x20000006
+ 2d8:	e000ed88 	.word	0xe000ed88
+$d():
+ 2dc:	20000000 	.word	0x20000000
+ 2e0:	20000008 	.word	0x20000008
+ 2e4:	2000048c 	.word	0x2000048c
+
+000002e8 <NmiSR>:
+NmiSR():
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:324
+// by a debugger.
+//
+//*****************************************************************************
+static void
+NmiSR(void)
+{
+ 2e8:	b480      	push	{r7}
+ 2ea:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:330 (discriminator 1)
+    //
+    // Enter an infinite loop.
+    //
+    while(1)
+    {
+    }
+ 2ec:	e7fe      	b.n	2ec <NmiSR+0x4>
+ 2ee:	bf00      	nop
+
+000002f0 <FaultISR>:
+FaultISR():
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:342
+// for examination by a debugger.
+//
+//*****************************************************************************
+static void
+FaultISR(void)
+{
+ 2f0:	b480      	push	{r7}
+ 2f2:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:348 (discriminator 1)
+    //
+    // Enter an infinite loop.
+    //
+    while(1)
+    {
+    }
+ 2f4:	e7fe      	b.n	2f4 <FaultISR+0x4>
+ 2f6:	bf00      	nop
+
+000002f8 <IntDefaultHandler>:
+IntDefaultHandler():
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:360
+// for examination by a debugger.
+//
+//*****************************************************************************
+static void
+IntDefaultHandler(void)
+{
+ 2f8:	b480      	push	{r7}
+ 2fa:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../system/startup_gcc.c:366 (discriminator 1)
+    //
+    // Go into an infinite loop.
+    //
+    while(1)
+    {
+    }
+ 2fc:	e7fe      	b.n	2fc <IntDefaultHandler+0x4>
+ 2fe:	bf00      	nop
+
+00000300 <getNextSp>:
+getNextSp():
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:17
+uint32_t getAddress(){
+	volatile uint32_t a = (*((volatile uint32_t *)(0xE000E000+0x10)));
+	return (uint32_t)taskSwitchAsm;
+}
+
+uint32_t getNextSp(uint32_t currentSp) {
+ 300:	b480      	push	{r7}
+ 302:	b085      	sub	sp, #20
+ 304:	af00      	add	r7, sp, #0
+ 306:	6078      	str	r0, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:20
+
+//读取systick标志位：
+	volatile uint32_t a = NVIC_ST_CTRL_R;
+ 308:	4b1f      	ldr	r3, [pc, #124]	; (388 <getNextSp+0x88>)
+ 30a:	681b      	ldr	r3, [r3, #0]
+ 30c:	60fb      	str	r3, [r7, #12]
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:21
+	if ((currentSp > (uint32_t)task1_stack)
+ 30e:	4a1f      	ldr	r2, [pc, #124]	; (38c <getNextSp+0x8c>)
+ 310:	687b      	ldr	r3, [r7, #4]
+ 312:	4293      	cmp	r3, r2
+ 314:	d90b      	bls.n	32e <getNextSp+0x2e>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:22
+			&& (currentSp <(uint32_t) (task1_stack + STACK_SIZE - 1))) {
+ 316:	4a1e      	ldr	r2, [pc, #120]	; (390 <getNextSp+0x90>)
+ 318:	687b      	ldr	r3, [r7, #4]
+ 31a:	4293      	cmp	r3, r2
+ 31c:	d207      	bcs.n	32e <getNextSp+0x2e>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:23
+		task1_stack[STACK_SIZE - 1] = currentSp;
+ 31e:	4a1b      	ldr	r2, [pc, #108]	; (38c <getNextSp+0x8c>)
+ 320:	687b      	ldr	r3, [r7, #4]
+ 322:	f8c2 30fc 	str.w	r3, [r2, #252]	; 0xfc
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:24
+		return task2_stack[STACK_SIZE - 1];
+ 326:	4b1b      	ldr	r3, [pc, #108]	; (394 <getNextSp+0x94>)
+ 328:	f8d3 30fc 	ldr.w	r3, [r3, #252]	; 0xfc
+ 32c:	e026      	b.n	37c <getNextSp+0x7c>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:26
+	}
+	else if ((currentSp > (uint32_t)task2_stack)
+ 32e:	4a19      	ldr	r2, [pc, #100]	; (394 <getNextSp+0x94>)
+ 330:	687b      	ldr	r3, [r7, #4]
+ 332:	4293      	cmp	r3, r2
+ 334:	d90b      	bls.n	34e <getNextSp+0x4e>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:27
+			&& (currentSp < (uint32_t)(task2_stack + STACK_SIZE - 1))) {
+ 336:	4a18      	ldr	r2, [pc, #96]	; (398 <getNextSp+0x98>)
+ 338:	687b      	ldr	r3, [r7, #4]
+ 33a:	4293      	cmp	r3, r2
+ 33c:	d207      	bcs.n	34e <getNextSp+0x4e>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:28
+		task2_stack[STACK_SIZE - 1] = currentSp;
+ 33e:	4a15      	ldr	r2, [pc, #84]	; (394 <getNextSp+0x94>)
+ 340:	687b      	ldr	r3, [r7, #4]
+ 342:	f8c2 30fc 	str.w	r3, [r2, #252]	; 0xfc
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:29
+		return task3_stack[STACK_SIZE - 1];
+ 346:	4b15      	ldr	r3, [pc, #84]	; (39c <getNextSp+0x9c>)
+ 348:	f8d3 30fc 	ldr.w	r3, [r3, #252]	; 0xfc
+ 34c:	e016      	b.n	37c <getNextSp+0x7c>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:31
+	}
+	else if ((currentSp > (uint32_t)task3_stack)
+ 34e:	4a13      	ldr	r2, [pc, #76]	; (39c <getNextSp+0x9c>)
+ 350:	687b      	ldr	r3, [r7, #4]
+ 352:	4293      	cmp	r3, r2
+ 354:	d90b      	bls.n	36e <getNextSp+0x6e>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:32
+			&& (currentSp < (uint32_t)(task3_stack + STACK_SIZE - 1))) {
+ 356:	4a12      	ldr	r2, [pc, #72]	; (3a0 <getNextSp+0xa0>)
+ 358:	687b      	ldr	r3, [r7, #4]
+ 35a:	4293      	cmp	r3, r2
+ 35c:	d207      	bcs.n	36e <getNextSp+0x6e>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:33
+		task3_stack[STACK_SIZE - 1] = currentSp;
+ 35e:	4a0f      	ldr	r2, [pc, #60]	; (39c <getNextSp+0x9c>)
+ 360:	687b      	ldr	r3, [r7, #4]
+ 362:	f8c2 30fc 	str.w	r3, [r2, #252]	; 0xfc
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:34
+		return task1_stack[STACK_SIZE - 1];
+ 366:	4b09      	ldr	r3, [pc, #36]	; (38c <getNextSp+0x8c>)
+ 368:	f8d3 30fc 	ldr.w	r3, [r3, #252]	; 0xfc
+ 36c:	e006      	b.n	37c <getNextSp+0x7c>
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:37
+	}
+	else {
+		pui32Stack[63] = currentSp;
+ 36e:	4a0d      	ldr	r2, [pc, #52]	; (3a4 <getNextSp+0xa4>)
+ 370:	687b      	ldr	r3, [r7, #4]
+ 372:	f8c2 30fc 	str.w	r3, [r2, #252]	; 0xfc
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:38
+		return task1_stack[STACK_SIZE-1];
+ 376:	4b05      	ldr	r3, [pc, #20]	; (38c <getNextSp+0x8c>)
+ 378:	f8d3 30fc 	ldr.w	r3, [r3, #252]	; 0xfc
+I:\ArmWorks\My_OS_3\Debug/../src/getSp.c:40
+	}
+}
+ 37c:	4618      	mov	r0, r3
+ 37e:	3714      	adds	r7, #20
+ 380:	46bd      	mov	sp, r7
+ 382:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 386:	4770      	bx	lr
+ 388:	e000e010 	.word	0xe000e010
+ 38c:	2000038c 	.word	0x2000038c
+ 390:	20000488 	.word	0x20000488
+ 394:	2000018c 	.word	0x2000018c
+ 398:	20000288 	.word	0x20000288
+ 39c:	2000028c 	.word	0x2000028c
+ 3a0:	20000388 	.word	0x20000388
+ 3a4:	2000000c 	.word	0x2000000c
+
+000003a8 <SysTick_handler>:
+$t():
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:12
+
+//必须将  SysTick_handler声明成函数，否则将会尝试切换成arm状态而触发一个硬fault
+.type SysTick_handler function
+
+SysTick_handler:
+	push {lr}               //跳转到C函数时会改变r0和lr的值，r0已经被硬件自动压栈,保存lr即可，在中断中使用的是msp
+ 3a8:	b500      	push	{lr}
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:15
+
+
+	cpsid i         		//关闭中断
+ 3aa:	b672      	cpsid	i
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:16
+	bl Led_handler          //闪烁led，表示进入中断函数
+ 3ac:	f000 f93a 	bl	624 <Led_handler>
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:18
+
+	mrs r0,psp
+ 3b0:	f3ef 8009 	mrs	r0, PSP
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:19
+	mov r1,sp                //目测stm指令会造成一点小麻烦，用push好了，需要保存sp
+ 3b4:	4669      	mov	r1, sp
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:21
+
+	mov sp,r0
+ 3b6:	4685      	mov	sp, r0
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:22
+	push {r4-r7}         //将当前任务的寄存器压入psp中
+ 3b8:	b4f0      	push	{r4, r5, r6, r7}
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:23
+	mov r0,sp
+ 3ba:	4668      	mov	r0, sp
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:32
+    *返回下一个任务的psp指针,函数的参数根据调用规则保存在r0中
+ 	*r0保存了下个任务的psp
+ 	*lr的值已经改变
+ 	*当r0的值为0的时候表示任务从未运行过
+ */
+	bl getNextSp
+ 3bc:	f7ff ffa0 	bl	300 <getNextSp>
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:36
+
+ //上下文保存完毕，设置栈指针完毕
+
+	mov sp,r0         //从进程栈中弹出下个任务的寄存器
+ 3c0:	4685      	mov	sp, r0
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:37
+	pop {r4-r7}
+ 3c2:	bcf0      	pop	{r4, r5, r6, r7}
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:38
+	mov r0,sp
+ 3c4:	4668      	mov	r0, sp
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:40
+
+	msr psp,r0              //将进程堆栈指针写入psr
+ 3c6:	f380 8809 	msr	PSP, r0
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:41
+	cpsie i                 //打开中断
+ 3ca:	b662      	cpsie	i
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:43
+
+	mov sp,r1              //恢复sp
+ 3cc:	468d      	mov	sp, r1
+I:\ArmWorks\My_OS_3\Debug/../src/interrupt_timer.S:44
+	pop {pc}           //弹出pc，跳转到下个任务出执行
+ 3ce:	bd00      	pop	{pc}
+
+000003d0 <led_init>:
+led_init():
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:12
+
+#ifndef SRC_LED_C_
+#define SRC_LED_C_
+#include  "led.h"
+#include "inc/tm4c123gh6pm.h"
+void led_init(void) {
+ 3d0:	b480      	push	{r7}
+ 3d2:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:13
+	SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOF;
+ 3d4:	4a0a      	ldr	r2, [pc, #40]	; (400 <stacksize>)
+ 3d6:	4b0a      	ldr	r3, [pc, #40]	; (400 <stacksize>)
+ 3d8:	681b      	ldr	r3, [r3, #0]
+ 3da:	f043 0320 	orr.w	r3, r3, #32
+ 3de:	6013      	str	r3, [r2, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:14
+	GPIO_PORTF_DIR_R |= (LED1_BIT)|(LED2_BIT)|(LED3_BIT);
+ 3e0:	4a08      	ldr	r2, [pc, #32]	; (404 <stacksize+0x4>)
+ 3e2:	4b08      	ldr	r3, [pc, #32]	; (404 <stacksize+0x4>)
+ 3e4:	681b      	ldr	r3, [r3, #0]
+ 3e6:	f043 031a 	orr.w	r3, r3, #26
+ 3ea:	6013      	str	r3, [r2, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:15
+	GPIO_PORTF_DEN_R |= (LED1_BIT)|(LED2_BIT)|(LED3_BIT);
+ 3ec:	4a06      	ldr	r2, [pc, #24]	; (408 <stacksize+0x8>)
+ 3ee:	4b06      	ldr	r3, [pc, #24]	; (408 <stacksize+0x8>)
+ 3f0:	681b      	ldr	r3, [r3, #0]
+ 3f2:	f043 031a 	orr.w	r3, r3, #26
+ 3f6:	6013      	str	r3, [r2, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:16
+}
+ 3f8:	46bd      	mov	sp, r7
+ 3fa:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 3fe:	4770      	bx	lr
+ 400:	400fe108 	.word	0x400fe108
+ 404:	40025400 	.word	0x40025400
+ 408:	4002551c 	.word	0x4002551c
+
+0000040c <ledOpen>:
+ledOpen():
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:22
+
+bool ledIsOn(LED led) {
+	return GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1)&led;
+}
+
+void ledOpen(uint32_t led) {
+ 40c:	b480      	push	{r7}
+ 40e:	b083      	sub	sp, #12
+ 410:	af00      	add	r7, sp, #0
+ 412:	6078      	str	r0, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:23
+	GPIO_PORTF_DATA_R |= led;
+ 414:	4905      	ldr	r1, [pc, #20]	; (42c <ledOpen+0x20>)
+ 416:	4b05      	ldr	r3, [pc, #20]	; (42c <ledOpen+0x20>)
+ 418:	681a      	ldr	r2, [r3, #0]
+ 41a:	687b      	ldr	r3, [r7, #4]
+ 41c:	4313      	orrs	r3, r2
+ 41e:	600b      	str	r3, [r1, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:24
+}
+ 420:	370c      	adds	r7, #12
+ 422:	46bd      	mov	sp, r7
+ 424:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 428:	4770      	bx	lr
+ 42a:	bf00      	nop
+ 42c:	400253fc 	.word	0x400253fc
+
+00000430 <ledClose>:
+ledClose():
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:26
+
+void ledClose(uint32_t led) {
+ 430:	b480      	push	{r7}
+ 432:	b083      	sub	sp, #12
+ 434:	af00      	add	r7, sp, #0
+ 436:	6078      	str	r0, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:27
+	GPIO_PORTF_DATA_R &= ~led;
+ 438:	4905      	ldr	r1, [pc, #20]	; (450 <ledClose+0x20>)
+ 43a:	4b05      	ldr	r3, [pc, #20]	; (450 <ledClose+0x20>)
+ 43c:	681a      	ldr	r2, [r3, #0]
+ 43e:	687b      	ldr	r3, [r7, #4]
+ 440:	43db      	mvns	r3, r3
+ 442:	4013      	ands	r3, r2
+ 444:	600b      	str	r3, [r1, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/led.c:28
+}
+ 446:	370c      	adds	r7, #12
+ 448:	46bd      	mov	sp, r7
+ 44a:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 44e:	4770      	bx	lr
+ 450:	400253fc 	.word	0x400253fc
+
+00000454 <SystickInit>:
+SystickInit():
+I:\ArmWorks\My_OS_3\Debug/../src/systick.c:8
+ *
+ *  Created on: 2015年1月16日
+ *      Author: kohill
+ */
+#include "systick.h"
+void SystickInit(uint32_t count,bool openInterrupt,bool openSystemInterrupt){
+ 454:	b580      	push	{r7, lr}
+ 456:	b082      	sub	sp, #8
+ 458:	af00      	add	r7, sp, #0
+ 45a:	6078      	str	r0, [r7, #4]
+ 45c:	460b      	mov	r3, r1
+ 45e:	70fb      	strb	r3, [r7, #3]
+ 460:	4613      	mov	r3, r2
+ 462:	70bb      	strb	r3, [r7, #2]
+I:\ArmWorks\My_OS_3\Debug/../src/systick.c:9
+    SysTickPeriodSet(count);
+ 464:	6878      	ldr	r0, [r7, #4]
+ 466:	f000 f9d9 	bl	81c <SysTickPeriodSet>
+I:\ArmWorks\My_OS_3\Debug/../src/systick.c:10
+    if(openInterrupt){
+ 46a:	78fb      	ldrb	r3, [r7, #3]
+ 46c:	2b00      	cmp	r3, #0
+ 46e:	d001      	beq.n	474 <SystickInit+0x20>
+I:\ArmWorks\My_OS_3\Debug/../src/systick.c:11
+    	SysTickIntEnable();
+ 470:	f000 f9cc 	bl	80c <SysTickIntEnable>
+I:\ArmWorks\My_OS_3\Debug/../src/systick.c:13
+    }
+    if(openSystemInterrupt){
+ 474:	78bb      	ldrb	r3, [r7, #2]
+ 476:	2b00      	cmp	r3, #0
+ 478:	d001      	beq.n	47e <SystickInit+0x2a>
+I:\ArmWorks\My_OS_3\Debug/../src/systick.c:14
+        IntMasterEnable();
+ 47a:	f000 f909 	bl	690 <IntMasterEnable>
+I:\ArmWorks\My_OS_3\Debug/../src/systick.c:16
+    }
+    SysTickEnable();
+ 47e:	f000 f9bd 	bl	7fc <SysTickEnable>
+I:\ArmWorks\My_OS_3\Debug/../src/systick.c:17
+}
+ 482:	3708      	adds	r7, #8
+ 484:	46bd      	mov	sp, r7
+ 486:	bd80      	pop	{r7, pc}
+
+00000488 <delay>:
+delay():
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:11
+ */
+
+#include "task.h"
+#include "public_header.h"
+#include "led.h"
+void delay() {
+ 488:	b480      	push	{r7}
+ 48a:	b083      	sub	sp, #12
+ 48c:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:12
+	int i = 0;
+ 48e:	2300      	movs	r3, #0
+ 490:	607b      	str	r3, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:13
+	for (i = 0; i < 0xfffff; i++)
+ 492:	2300      	movs	r3, #0
+ 494:	607b      	str	r3, [r7, #4]
+ 496:	e002      	b.n	49e <delay+0x16>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:13 (discriminator 3)
+ 498:	687b      	ldr	r3, [r7, #4]
+ 49a:	3301      	adds	r3, #1
+ 49c:	607b      	str	r3, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:13 (discriminator 1)
+ 49e:	687b      	ldr	r3, [r7, #4]
+ 4a0:	4a03      	ldr	r2, [pc, #12]	; (4b0 <delay+0x28>)
+ 4a2:	4293      	cmp	r3, r2
+ 4a4:	ddf8      	ble.n	498 <delay+0x10>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:15
+		;
+}
+ 4a6:	370c      	adds	r7, #12
+ 4a8:	46bd      	mov	sp, r7
+ 4aa:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 4ae:	4770      	bx	lr
+ 4b0:	000ffffe 	.word	0x000ffffe
+
+000004b4 <led1_task>:
+led1_task():
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:21
+void Delay() {
+	int i = 0;
+	for (i = 0; i < 1; i++)
+		;
+}
+void led1_task() {
+ 4b4:	b580      	push	{r7, lr}
+ 4b6:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:24
+	static bool _islight = true;
+	while (1) {
+		if(_islight){
+ 4b8:	4b16      	ldr	r3, [pc, #88]	; (514 <led1_task+0x60>)
+ 4ba:	781b      	ldrb	r3, [r3, #0]
+ 4bc:	2b00      	cmp	r3, #0
+ 4be:	d014      	beq.n	4ea <led1_task+0x36>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:25
+			ledClose(red);
+ 4c0:	2012      	movs	r0, #18
+ 4c2:	f7ff ffb5 	bl	430 <ledClose>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:26
+			_islight =!_islight;
+ 4c6:	4b13      	ldr	r3, [pc, #76]	; (514 <led1_task+0x60>)
+ 4c8:	781b      	ldrb	r3, [r3, #0]
+ 4ca:	2b00      	cmp	r3, #0
+ 4cc:	bf14      	ite	ne
+ 4ce:	2301      	movne	r3, #1
+ 4d0:	2300      	moveq	r3, #0
+ 4d2:	b2db      	uxtb	r3, r3
+ 4d4:	f083 0301 	eor.w	r3, r3, #1
+ 4d8:	b2db      	uxtb	r3, r3
+ 4da:	f003 0301 	and.w	r3, r3, #1
+ 4de:	b2da      	uxtb	r2, r3
+ 4e0:	4b0c      	ldr	r3, [pc, #48]	; (514 <led1_task+0x60>)
+ 4e2:	701a      	strb	r2, [r3, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:27
+			delay();
+ 4e4:	f7ff ffd0 	bl	488 <delay>
+ 4e8:	e013      	b.n	512 <led1_task+0x5e>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:30
+		}
+		else{
+			_islight =!_islight;
+ 4ea:	4b0a      	ldr	r3, [pc, #40]	; (514 <led1_task+0x60>)
+ 4ec:	781b      	ldrb	r3, [r3, #0]
+ 4ee:	2b00      	cmp	r3, #0
+ 4f0:	bf14      	ite	ne
+ 4f2:	2301      	movne	r3, #1
+ 4f4:	2300      	moveq	r3, #0
+ 4f6:	b2db      	uxtb	r3, r3
+ 4f8:	f083 0301 	eor.w	r3, r3, #1
+ 4fc:	b2db      	uxtb	r3, r3
+ 4fe:	f003 0301 	and.w	r3, r3, #1
+ 502:	b2da      	uxtb	r2, r3
+ 504:	4b03      	ldr	r3, [pc, #12]	; (514 <led1_task+0x60>)
+ 506:	701a      	strb	r2, [r3, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:31
+			ledOpen(red);
+ 508:	2012      	movs	r0, #18
+ 50a:	f7ff ff7f 	bl	40c <ledOpen>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:32
+			delay();
+ 50e:	f7ff ffbb 	bl	488 <delay>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:34
+		}
+	};
+ 512:	e7d1      	b.n	4b8 <led1_task+0x4>
+ 514:	20000004 	.word	0x20000004
+
+00000518 <led2_task>:
+led2_task():
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:36
+}
+void led2_task() {
+ 518:	b580      	push	{r7, lr}
+ 51a:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:39
+	static bool _islight = true;
+	while (1) {
+		if(_islight){
+ 51c:	4b16      	ldr	r3, [pc, #88]	; (578 <led2_task+0x60>)
+ 51e:	781b      	ldrb	r3, [r3, #0]
+ 520:	2b00      	cmp	r3, #0
+ 522:	d014      	beq.n	54e <led2_task+0x36>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:40
+			ledClose(green);
+ 524:	2008      	movs	r0, #8
+ 526:	f7ff ff83 	bl	430 <ledClose>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:41
+			_islight =!_islight;
+ 52a:	4b13      	ldr	r3, [pc, #76]	; (578 <led2_task+0x60>)
+ 52c:	781b      	ldrb	r3, [r3, #0]
+ 52e:	2b00      	cmp	r3, #0
+ 530:	bf14      	ite	ne
+ 532:	2301      	movne	r3, #1
+ 534:	2300      	moveq	r3, #0
+ 536:	b2db      	uxtb	r3, r3
+ 538:	f083 0301 	eor.w	r3, r3, #1
+ 53c:	b2db      	uxtb	r3, r3
+ 53e:	f003 0301 	and.w	r3, r3, #1
+ 542:	b2da      	uxtb	r2, r3
+ 544:	4b0c      	ldr	r3, [pc, #48]	; (578 <led2_task+0x60>)
+ 546:	701a      	strb	r2, [r3, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:42
+			delay();
+ 548:	f7ff ff9e 	bl	488 <delay>
+ 54c:	e013      	b.n	576 <led2_task+0x5e>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:45
+		}
+		else{
+			_islight =!_islight;
+ 54e:	4b0a      	ldr	r3, [pc, #40]	; (578 <led2_task+0x60>)
+ 550:	781b      	ldrb	r3, [r3, #0]
+ 552:	2b00      	cmp	r3, #0
+ 554:	bf14      	ite	ne
+ 556:	2301      	movne	r3, #1
+ 558:	2300      	moveq	r3, #0
+ 55a:	b2db      	uxtb	r3, r3
+ 55c:	f083 0301 	eor.w	r3, r3, #1
+ 560:	b2db      	uxtb	r3, r3
+ 562:	f003 0301 	and.w	r3, r3, #1
+ 566:	b2da      	uxtb	r2, r3
+ 568:	4b03      	ldr	r3, [pc, #12]	; (578 <led2_task+0x60>)
+ 56a:	701a      	strb	r2, [r3, #0]
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:46
+			ledOpen(green);
+ 56c:	2008      	movs	r0, #8
+ 56e:	f7ff ff4d 	bl	40c <ledOpen>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:47
+			delay();
+ 572:	f7ff ff89 	bl	488 <delay>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:49
+		}
+	};
+ 576:	e7d1      	b.n	51c <led2_task+0x4>
+ 578:	20000005 	.word	0x20000005
+
+0000057c <led3_task>:
+led3_task():
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:51
+}
+void led3_task() {
+ 57c:	b580      	push	{r7, lr}
+ 57e:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:54 (discriminator 1)
+	static bool _islight = true;
+	while (1) {
+		ledOpen(red);
+ 580:	2012      	movs	r0, #18
+ 582:	f7ff ff43 	bl	40c <ledOpen>
+I:\ArmWorks\My_OS_3\Debug/../src/task.c:55 (discriminator 1)
+	}
+ 586:	e7fb      	b.n	580 <led3_task+0x4>
+
+00000588 <setTask1>:
+setTask1():
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:27
+uint32_t task1_stack[STACK_SIZE];
+uint32_t task2_stack[STACK_SIZE];
+uint32_t task3_stack[STACK_SIZE];
+
+
+void setTask1(TaskFunction f) {
+ 588:	b480      	push	{r7}
+ 58a:	b083      	sub	sp, #12
+ 58c:	af00      	add	r7, sp, #0
+ 58e:	6078      	str	r0, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:28
+	task1_stack[STACK_SIZE - 1] = task1_stack + STACK_SIZE - 13;
+ 590:	4a08      	ldr	r2, [pc, #32]	; (5b4 <setTask1+0x2c>)
+ 592:	4b09      	ldr	r3, [pc, #36]	; (5b8 <setTask1+0x30>)
+ 594:	f8c3 20fc 	str.w	r2, [r3, #252]	; 0xfc
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:29
+	task1_stack[STACK_SIZE - 2]=0x1000000;
+ 598:	4b07      	ldr	r3, [pc, #28]	; (5b8 <setTask1+0x30>)
+ 59a:	f04f 7280 	mov.w	r2, #16777216	; 0x1000000
+ 59e:	f8c3 20f8 	str.w	r2, [r3, #248]	; 0xf8
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:30
+	task1_stack[STACK_SIZE - 3] = f;
+ 5a2:	687b      	ldr	r3, [r7, #4]
+ 5a4:	4a04      	ldr	r2, [pc, #16]	; (5b8 <setTask1+0x30>)
+ 5a6:	f8c2 30f4 	str.w	r3, [r2, #244]	; 0xf4
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:31
+}
+ 5aa:	370c      	adds	r7, #12
+ 5ac:	46bd      	mov	sp, r7
+ 5ae:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5b2:	4770      	bx	lr
+ 5b4:	20000458 	.word	0x20000458
+ 5b8:	2000038c 	.word	0x2000038c
+
+000005bc <setTask2>:
+setTask2():
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:33
+
+void setTask2(TaskFunction f) {
+ 5bc:	b480      	push	{r7}
+ 5be:	b083      	sub	sp, #12
+ 5c0:	af00      	add	r7, sp, #0
+ 5c2:	6078      	str	r0, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:34
+	task2_stack[STACK_SIZE - 1] = task2_stack + STACK_SIZE - 13;
+ 5c4:	4a08      	ldr	r2, [pc, #32]	; (5e8 <setTask2+0x2c>)
+ 5c6:	4b09      	ldr	r3, [pc, #36]	; (5ec <setTask2+0x30>)
+ 5c8:	f8c3 20fc 	str.w	r2, [r3, #252]	; 0xfc
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:35
+	task2_stack[STACK_SIZE - 2]=0x1000000;
+ 5cc:	4b07      	ldr	r3, [pc, #28]	; (5ec <setTask2+0x30>)
+ 5ce:	f04f 7280 	mov.w	r2, #16777216	; 0x1000000
+ 5d2:	f8c3 20f8 	str.w	r2, [r3, #248]	; 0xf8
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:36
+	task2_stack[STACK_SIZE - 3] = f;
+ 5d6:	687b      	ldr	r3, [r7, #4]
+ 5d8:	4a04      	ldr	r2, [pc, #16]	; (5ec <setTask2+0x30>)
+ 5da:	f8c2 30f4 	str.w	r3, [r2, #244]	; 0xf4
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:37
+}
+ 5de:	370c      	adds	r7, #12
+ 5e0:	46bd      	mov	sp, r7
+ 5e2:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5e6:	4770      	bx	lr
+ 5e8:	20000258 	.word	0x20000258
+ 5ec:	2000018c 	.word	0x2000018c
+
+000005f0 <setTask3>:
+setTask3():
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:39
+
+void setTask3(TaskFunction f) {
+ 5f0:	b480      	push	{r7}
+ 5f2:	b083      	sub	sp, #12
+ 5f4:	af00      	add	r7, sp, #0
+ 5f6:	6078      	str	r0, [r7, #4]
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:40
+	task3_stack[STACK_SIZE - 1] = task3_stack + STACK_SIZE - 13;
+ 5f8:	4a08      	ldr	r2, [pc, #32]	; (61c <setTask3+0x2c>)
+ 5fa:	4b09      	ldr	r3, [pc, #36]	; (620 <setTask3+0x30>)
+ 5fc:	f8c3 20fc 	str.w	r2, [r3, #252]	; 0xfc
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:41
+	task3_stack[STACK_SIZE - 2]=0x1000000;
+ 600:	4b07      	ldr	r3, [pc, #28]	; (620 <setTask3+0x30>)
+ 602:	f04f 7280 	mov.w	r2, #16777216	; 0x1000000
+ 606:	f8c3 20f8 	str.w	r2, [r3, #248]	; 0xf8
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:42
+	task3_stack[STACK_SIZE - 3] = f;
+ 60a:	687b      	ldr	r3, [r7, #4]
+ 60c:	4a04      	ldr	r2, [pc, #16]	; (620 <setTask3+0x30>)
+ 60e:	f8c2 30f4 	str.w	r3, [r2, #244]	; 0xf4
+I:\ArmWorks\My_OS_3\Debug/../src/task_add.c:43
+}
+ 612:	370c      	adds	r7, #12
+ 614:	46bd      	mov	sp, r7
+ 616:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 61a:	4770      	bx	lr
+ 61c:	20000358 	.word	0x20000358
+ 620:	2000028c 	.word	0x2000028c
+
+00000624 <Led_handler>:
+Led_handler():
+I:\ArmWorks\My_OS_3\Debug/../main.c:30
+#include "public_header.h"
+#include "led.h"
+#include "task.h"
+#include "systick.h"
+
+void Led_handler() {
+ 624:	b580      	push	{r7, lr}
+ 626:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../main.c:32
+	static bool isOpen = false;
+	if (!isOpen) {
+ 628:	4b08      	ldr	r3, [pc, #32]	; (64c <Led_handler+0x28>)
+ 62a:	781b      	ldrb	r3, [r3, #0]
+ 62c:	f083 0301 	eor.w	r3, r3, #1
+ 630:	b2db      	uxtb	r3, r3
+ 632:	2b00      	cmp	r3, #0
+ 634:	d003      	beq.n	63e <Led_handler+0x1a>
+I:\ArmWorks\My_OS_3\Debug/../main.c:34
+//		ledOpen(green);
+		isOpen = true;
+ 636:	4b05      	ldr	r3, [pc, #20]	; (64c <Led_handler+0x28>)
+ 638:	2201      	movs	r2, #1
+ 63a:	701a      	strb	r2, [r3, #0]
+ 63c:	e005      	b.n	64a <Led_handler+0x26>
+I:\ArmWorks\My_OS_3\Debug/../main.c:36
+	} else {
+		ledClose(green);
+ 63e:	2008      	movs	r0, #8
+ 640:	f7ff fef6 	bl	430 <ledClose>
+I:\ArmWorks\My_OS_3\Debug/../main.c:37
+		isOpen = false;
+ 644:	4b01      	ldr	r3, [pc, #4]	; (64c <Led_handler+0x28>)
+ 646:	2200      	movs	r2, #0
+ 648:	701a      	strb	r2, [r3, #0]
+I:\ArmWorks\My_OS_3\Debug/../main.c:39
+	}
+}
+ 64a:	bd80      	pop	{r7, pc}
+ 64c:	20000008 	.word	0x20000008
+
+00000650 <main>:
+main():
+I:\ArmWorks\My_OS_3\Debug/../main.c:40
+int main(void) {
+ 650:	b580      	push	{r7, lr}
+ 652:	af00      	add	r7, sp, #0
+I:\ArmWorks\My_OS_3\Debug/../main.c:41
+	led_init();
+ 654:	f7ff febc 	bl	3d0 <led_init>
+I:\ArmWorks\My_OS_3\Debug/../main.c:42
+	setTask1(led1_task);
+ 658:	480a      	ldr	r0, [pc, #40]	; (684 <main+0x34>)
+ 65a:	f7ff ff95 	bl	588 <setTask1>
+I:\ArmWorks\My_OS_3\Debug/../main.c:43
+	setTask2(led2_task);
+ 65e:	480a      	ldr	r0, [pc, #40]	; (688 <main+0x38>)
+ 660:	f7ff ffac 	bl	5bc <setTask2>
+I:\ArmWorks\My_OS_3\Debug/../main.c:44
+	setTask3(led3_task);
+ 664:	4809      	ldr	r0, [pc, #36]	; (68c <main+0x3c>)
+ 666:	f7ff ffc3 	bl	5f0 <setTask3>
+I:\ArmWorks\My_OS_3\Debug/../main.c:45
+	IntMasterEnable();
+ 66a:	f000 f811 	bl	690 <IntMasterEnable>
+I:\ArmWorks\My_OS_3\Debug/../main.c:46
+	SystickInit(SysCtlClockGet()*2, true, true);
+ 66e:	f000 f817 	bl	6a0 <SysCtlClockGet>
+ 672:	4603      	mov	r3, r0
+ 674:	005b      	lsls	r3, r3, #1
+ 676:	4618      	mov	r0, r3
+ 678:	2101      	movs	r1, #1
+ 67a:	2201      	movs	r2, #1
+ 67c:	f7ff feea 	bl	454 <SystickInit>
+I:\ArmWorks\My_OS_3\Debug/../main.c:48 (discriminator 1)
+	while (1)
+	;
+ 680:	e7fe      	b.n	680 <main+0x30>
+ 682:	bf00      	nop
+ 684:	000004b5 	.word	0x000004b5
+ 688:	00000519 	.word	0x00000519
+ 68c:	0000057d 	.word	0x0000057d
+
+00000690 <IntMasterEnable>:
+IntMasterEnable():
+ 690:	b508      	push	{r3, lr}
+ 692:	f000 f8c9 	bl	828 <CPUcpsie>
+ 696:	3800      	subs	r0, #0
+ 698:	bf18      	it	ne
+ 69a:	2001      	movne	r0, #1
+ 69c:	bd08      	pop	{r3, pc}
+	...
+
+000006a0 <SysCtlClockGet>:
+SysCtlClockGet():
+ 6a0:	4b49      	ldr	r3, [pc, #292]	; (7c8 <SysCtlClockGet+0x128>)
+ 6a2:	6819      	ldr	r1, [r3, #0]
+ 6a4:	691a      	ldr	r2, [r3, #16]
+ 6a6:	2a00      	cmp	r2, #0
+ 6a8:	bfb4      	ite	lt
+ 6aa:	f002 0370 	andlt.w	r3, r2, #112	; 0x70
+ 6ae:	f001 0330 	andge.w	r3, r1, #48	; 0x30
+ 6b2:	2b20      	cmp	r3, #32
+ 6b4:	b530      	push	{r4, r5, lr}
+ 6b6:	d019      	beq.n	6ec <SysCtlClockGet+0x4c>
+ 6b8:	d804      	bhi.n	6c4 <SysCtlClockGet+0x24>
+ 6ba:	b153      	cbz	r3, 6d2 <SysCtlClockGet+0x32>
+ 6bc:	2b10      	cmp	r3, #16
+ 6be:	f040 8081 	bne.w	7c4 <SysCtlClockGet+0x124>
+ 6c2:	e004      	b.n	6ce <SysCtlClockGet+0x2e>
+ 6c4:	2b30      	cmp	r3, #48	; 0x30
+ 6c6:	d00b      	beq.n	6e0 <SysCtlClockGet+0x40>
+ 6c8:	2b70      	cmp	r3, #112	; 0x70
+ 6ca:	d17b      	bne.n	7c4 <SysCtlClockGet+0x124>
+ 6cc:	e00b      	b.n	6e6 <SysCtlClockGet+0x46>
+ 6ce:	4b3f      	ldr	r3, [pc, #252]	; (7cc <SysCtlClockGet+0x12c>)
+ 6d0:	e00d      	b.n	6ee <SysCtlClockGet+0x4e>
+ 6d2:	f401 60f8 	and.w	r0, r1, #1984	; 0x7c0
+ 6d6:	0980      	lsrs	r0, r0, #6
+ 6d8:	4b3d      	ldr	r3, [pc, #244]	; (7d0 <SysCtlClockGet+0x130>)
+ 6da:	f853 3020 	ldr.w	r3, [r3, r0, lsl #2]
+ 6de:	e006      	b.n	6ee <SysCtlClockGet+0x4e>
+ 6e0:	f247 5330 	movw	r3, #30000	; 0x7530
+ 6e4:	e003      	b.n	6ee <SysCtlClockGet+0x4e>
+ 6e6:	f44f 4300 	mov.w	r3, #32768	; 0x8000
+ 6ea:	e000      	b.n	6ee <SysCtlClockGet+0x4e>
+ 6ec:	4b39      	ldr	r3, [pc, #228]	; (7d4 <SysCtlClockGet+0x134>)
+ 6ee:	2a00      	cmp	r2, #0
+ 6f0:	da02      	bge.n	6f8 <SysCtlClockGet+0x58>
+ 6f2:	f412 6f00 	tst.w	r2, #2048	; 0x800
+ 6f6:	e001      	b.n	6fc <SysCtlClockGet+0x5c>
+ 6f8:	f411 6f00 	tst.w	r1, #2048	; 0x800
+ 6fc:	d13d      	bne.n	77a <SysCtlClockGet+0xda>
+ 6fe:	4836      	ldr	r0, [pc, #216]	; (7d8 <SysCtlClockGet+0x138>)
+ 700:	6805      	ldr	r5, [r0, #0]
+ 702:	3004      	adds	r0, #4
+ 704:	f441 0180 	orr.w	r1, r1, #4194304	; 0x400000
+ 708:	6800      	ldr	r0, [r0, #0]
+ 70a:	f000 041f 	and.w	r4, r0, #31
+ 70e:	f400 50f8 	and.w	r0, r0, #7936	; 0x1f00
+ 712:	3401      	adds	r4, #1
+ 714:	0a00      	lsrs	r0, r0, #8
+ 716:	0064      	lsls	r4, r4, #1
+ 718:	3001      	adds	r0, #1
+ 71a:	4360      	muls	r0, r4
+ 71c:	4c2f      	ldr	r4, [pc, #188]	; (7dc <SysCtlClockGet+0x13c>)
+ 71e:	ea05 0404 	and.w	r4, r5, r4
+ 722:	fbb3 f3f0 	udiv	r3, r3, r0
+ 726:	0aa4      	lsrs	r4, r4, #10
+ 728:	435c      	muls	r4, r3
+ 72a:	05a8      	lsls	r0, r5, #22
+ 72c:	0d80      	lsrs	r0, r0, #22
+ 72e:	0aa4      	lsrs	r4, r4, #10
+ 730:	fb00 4303 	mla	r3, r0, r3, r4
+ 734:	482a      	ldr	r0, [pc, #168]	; (7e0 <SysCtlClockGet+0x140>)
+ 736:	6800      	ldr	r0, [r0, #0]
+ 738:	f400 4070 	and.w	r0, r0, #61440	; 0xf000
+ 73c:	f5b0 5f40 	cmp.w	r0, #12288	; 0x3000
+ 740:	d013      	beq.n	76a <SysCtlClockGet+0xca>
+ 742:	d806      	bhi.n	752 <SysCtlClockGet+0xb2>
+ 744:	f5b0 5f80 	cmp.w	r0, #4096	; 0x1000
+ 748:	d01a      	beq.n	780 <SysCtlClockGet+0xe0>
+ 74a:	f5b0 5f00 	cmp.w	r0, #8192	; 0x2000
+ 74e:	d114      	bne.n	77a <SysCtlClockGet+0xda>
+ 750:	e009      	b.n	766 <SysCtlClockGet+0xc6>
+ 752:	f5b0 4fe0 	cmp.w	r0, #28672	; 0x7000
+ 756:	d00c      	beq.n	772 <SysCtlClockGet+0xd2>
+ 758:	f5b0 4f10 	cmp.w	r0, #36864	; 0x9000
+ 75c:	d00b      	beq.n	776 <SysCtlClockGet+0xd6>
+ 75e:	f5b0 4f80 	cmp.w	r0, #16384	; 0x4000
+ 762:	d10a      	bne.n	77a <SysCtlClockGet+0xda>
+ 764:	e003      	b.n	76e <SysCtlClockGet+0xce>
+ 766:	481f      	ldr	r0, [pc, #124]	; (7e4 <SysCtlClockGet+0x144>)
+ 768:	e00b      	b.n	782 <SysCtlClockGet+0xe2>
+ 76a:	481f      	ldr	r0, [pc, #124]	; (7e8 <SysCtlClockGet+0x148>)
+ 76c:	e009      	b.n	782 <SysCtlClockGet+0xe2>
+ 76e:	481f      	ldr	r0, [pc, #124]	; (7ec <SysCtlClockGet+0x14c>)
+ 770:	e007      	b.n	782 <SysCtlClockGet+0xe2>
+ 772:	481f      	ldr	r0, [pc, #124]	; (7f0 <SysCtlClockGet+0x150>)
+ 774:	e005      	b.n	782 <SysCtlClockGet+0xe2>
+ 776:	481f      	ldr	r0, [pc, #124]	; (7f4 <SysCtlClockGet+0x154>)
+ 778:	e003      	b.n	782 <SysCtlClockGet+0xe2>
+ 77a:	f04f 30ff 	mov.w	r0, #4294967295
+ 77e:	e000      	b.n	782 <SysCtlClockGet+0xe2>
+ 780:	481d      	ldr	r0, [pc, #116]	; (7f8 <SysCtlClockGet+0x158>)
+ 782:	f411 0f80 	tst.w	r1, #4194304	; 0x400000
+ 786:	d019      	beq.n	7bc <SysCtlClockGet+0x11c>
+ 788:	2a00      	cmp	r2, #0
+ 78a:	da11      	bge.n	7b0 <SysCtlClockGet+0x110>
+ 78c:	f012 4f80 	tst.w	r2, #1073741824	; 0x40000000
+ 790:	d007      	beq.n	7a2 <SysCtlClockGet+0x102>
+ 792:	f412 6f00 	tst.w	r2, #2048	; 0x800
+ 796:	d104      	bne.n	7a2 <SysCtlClockGet+0x102>
+ 798:	f002 52fe 	and.w	r2, r2, #532676608	; 0x1fc00000
+ 79c:	005b      	lsls	r3, r3, #1
+ 79e:	0d92      	lsrs	r2, r2, #22
+ 7a0:	e002      	b.n	7a8 <SysCtlClockGet+0x108>
+ 7a2:	f002 52fc 	and.w	r2, r2, #528482304	; 0x1f800000
+ 7a6:	0dd2      	lsrs	r2, r2, #23
+ 7a8:	3201      	adds	r2, #1
+ 7aa:	fbb3 f3f2 	udiv	r3, r3, r2
+ 7ae:	e005      	b.n	7bc <SysCtlClockGet+0x11c>
+ 7b0:	f001 61f0 	and.w	r1, r1, #125829120	; 0x7800000
+ 7b4:	0dc9      	lsrs	r1, r1, #23
+ 7b6:	3101      	adds	r1, #1
+ 7b8:	fbb3 f3f1 	udiv	r3, r3, r1
+ 7bc:	4283      	cmp	r3, r0
+ 7be:	bf38      	it	cc
+ 7c0:	4618      	movcc	r0, r3
+ 7c2:	bd30      	pop	{r4, r5, pc}
+ 7c4:	2000      	movs	r0, #0
+ 7c6:	bd30      	pop	{r4, r5, pc}
+ 7c8:	400fe060 	.word	0x400fe060
+ 7cc:	00f42400 	.word	0x00f42400
+ 7d0:	00000830 	.word	0x00000830
+ 7d4:	003d0900 	.word	0x003d0900
+ 7d8:	400fe160 	.word	0x400fe160
+ 7dc:	000ffc00 	.word	0x000ffc00
+ 7e0:	400fe010 	.word	0x400fe010
+ 7e4:	03f940aa 	.word	0x03f940aa
+ 7e8:	02faf080 	.word	0x02faf080
+ 7ec:	02625a00 	.word	0x02625a00
+ 7f0:	017d7840 	.word	0x017d7840
+ 7f4:	01312d00 	.word	0x01312d00
+ 7f8:	04c4b400 	.word	0x04c4b400
+
+000007fc <SysTickEnable>:
+SysTickEnable():
+ 7fc:	4b02      	ldr	r3, [pc, #8]	; (808 <SysTickEnable+0xc>)
+ 7fe:	681a      	ldr	r2, [r3, #0]
+ 800:	f042 0205 	orr.w	r2, r2, #5
+ 804:	601a      	str	r2, [r3, #0]
+ 806:	4770      	bx	lr
+ 808:	e000e010 	.word	0xe000e010
+
+0000080c <SysTickIntEnable>:
+SysTickIntEnable():
+ 80c:	4b02      	ldr	r3, [pc, #8]	; (818 <SysTickIntEnable+0xc>)
+ 80e:	681a      	ldr	r2, [r3, #0]
+ 810:	f042 0202 	orr.w	r2, r2, #2
+ 814:	601a      	str	r2, [r3, #0]
+ 816:	4770      	bx	lr
+ 818:	e000e010 	.word	0xe000e010
+
+0000081c <SysTickPeriodSet>:
+SysTickPeriodSet():
+ 81c:	4b01      	ldr	r3, [pc, #4]	; (824 <SysTickPeriodSet+0x8>)
+ 81e:	3801      	subs	r0, #1
+ 820:	6018      	str	r0, [r3, #0]
+ 822:	4770      	bx	lr
+ 824:	e000e014 	.word	0xe000e014
+
+00000828 <CPUcpsie>:
+CPUcpsie():
+ 828:	f3ef 8010 	mrs	r0, PRIMASK
+ 82c:	b662      	cpsie	i
+ 82e:	4770      	bx	lr
+
+00000830 <g_pui32Xtals>:
+$d():
+ 830:	4240 000f 2000 001c 8480 001e 8000 0025     @B... ........%.
+ 840:	9e99 0036 4000 0038 0900 003d 8000 003e     ..6..@8...=...>.
+ 850:	0000 004b 4b40 004c 2000 004e 8d80 005b     ..K.@KL.. N...[.
+ 860:	c000 005d 8000 0070 1200 007a 0000 007d     ..]...p...z...}.
+ 870:	9680 0098 1b00 00b7 8000 00bb e8c0 00ce     ................
+ 880:	7a64 00da 2400 00f4 0000 00fa a880 0112     dz...$..........
+ 890:	2d00 0131 3600 016e 7840 017d               .-1..6n.@x}.
