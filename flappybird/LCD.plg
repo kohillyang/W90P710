@@ -1,0 +1,275 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\kohill\Desktop\flappybird\LCD.uvproj
+Project File Date:  01/14/2015
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling LCDDriver.c...
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(564): warning:  #2532-D: support for trigraphs is disabled
+assembling Startup.s...
+compiling main.c...
+main.c(104): warning:  #223-D: function "SysTickIntEnable" declared implicitly
+main.c(185): warning:  #177-D: variable "i" was declared but never referenced
+main.c(273): warning:  #223-D: function "SysTickPeriodSet" declared implicitly
+main.c(275): warning:  #223-D: function "SysTickEnable" declared implicitly
+main.c(276): warning:  #223-D: function "SysTickPeriodGet" declared implicitly
+main.c(293): warning:  #177-D: variable "old_Raw" was declared but never referenced
+main.c(293): warning:  #177-D: variable "old_Col" was declared but never referenced
+main.c(295): warning:  #550-D: variable "cur_Raw" was set but never used
+main.c(297): warning:  #177-D: variable "sample" was declared but never referenced
+main.c(325): warning:  #177-D: variable "i" was declared but never referenced
+main.c(325): warning:  #177-D: variable "j" was declared but never referenced
+main.c(373): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(373): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(488): warning:  #223-D: function "SysTickIntDisable" declared implicitly
+main.c(489): warning:  #223-D: function "SysTickDisable" declared implicitly
+linking...
+Program Size: Code=8472 RO-data=1280 RW-data=4476 ZI-data=25412  
+".\LCD.axf" - 0 Errors, 21 Warning(s).
+Load "C:\\Users\\kohill\\Desktop\\flappybird\\LCD.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+compiling LCDDriver.c...
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(564): warning:  #2532-D: support for trigraphs is disabled
+assembling Startup.s...
+compiling main.c...
+main.c(105): warning:  #223-D: function "SysTickIntEnable" declared implicitly
+main.c(186): warning:  #177-D: variable "i" was declared but never referenced
+main.c(274): warning:  #223-D: function "SysTickPeriodSet" declared implicitly
+main.c(276): warning:  #223-D: function "SysTickEnable" declared implicitly
+main.c(277): warning:  #223-D: function "SysTickPeriodGet" declared implicitly
+main.c(294): warning:  #177-D: variable "old_Raw" was declared but never referenced
+main.c(294): warning:  #177-D: variable "old_Col" was declared but never referenced
+main.c(296): warning:  #550-D: variable "cur_Raw" was set but never used
+main.c(298): warning:  #177-D: variable "sample" was declared but never referenced
+main.c(327): warning:  #177-D: variable "i" was declared but never referenced
+main.c(327): warning:  #177-D: variable "j" was declared but never referenced
+main.c(375): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(375): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(490): warning:  #223-D: function "SysTickIntDisable" declared implicitly
+main.c(491): warning:  #223-D: function "SysTickDisable" declared implicitly
+linking...
+Program Size: Code=8520 RO-data=1280 RW-data=4476 ZI-data=25412  
+".\LCD.axf" - 0 Errors, 21 Warning(s).
+Load "C:\\Users\\kohill\\Desktop\\flappybird\\LCD.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\kohill\\Desktop\\flappybird\\LCD.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+compiling LCDDriver.c...
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(564): warning:  #2532-D: support for trigraphs is disabled
+assembling Startup.s...
+compiling main.c...
+main.c(104): warning:  #223-D: function "SysTickIntEnable" declared implicitly
+main.c(185): warning:  #177-D: variable "i" was declared but never referenced
+main.c(273): warning:  #223-D: function "SysTickPeriodSet" declared implicitly
+main.c(275): warning:  #223-D: function "SysTickEnable" declared implicitly
+main.c(276): warning:  #223-D: function "SysTickPeriodGet" declared implicitly
+main.c(293): warning:  #177-D: variable "old_Raw" was declared but never referenced
+main.c(293): warning:  #177-D: variable "old_Col" was declared but never referenced
+main.c(295): warning:  #550-D: variable "cur_Raw" was set but never used
+main.c(297): warning:  #177-D: variable "sample" was declared but never referenced
+main.c(326): warning:  #177-D: variable "i" was declared but never referenced
+main.c(326): warning:  #177-D: variable "j" was declared but never referenced
+main.c(374): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(374): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(489): warning:  #223-D: function "SysTickIntDisable" declared implicitly
+main.c(490): warning:  #223-D: function "SysTickDisable" declared implicitly
+linking...
+Program Size: Code=8504 RO-data=1280 RW-data=4476 ZI-data=25412  
+".\LCD.axf" - 0 Errors, 21 Warning(s).
+Load "C:\\Users\\kohill\\Desktop\\flappybird\\LCD.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+compiling LCDDriver.c...
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(564): warning:  #2532-D: support for trigraphs is disabled
+assembling Startup.s...
+compiling main.c...
+main.c(104): warning:  #223-D: function "SysTickIntEnable" declared implicitly
+main.c(182): warning:  #177-D: variable "i" was declared but never referenced
+main.c(270): warning:  #223-D: function "SysTickPeriodSet" declared implicitly
+main.c(272): warning:  #223-D: function "SysTickEnable" declared implicitly
+main.c(273): warning:  #223-D: function "SysTickPeriodGet" declared implicitly
+main.c(290): warning:  #177-D: variable "old_Raw" was declared but never referenced
+main.c(290): warning:  #177-D: variable "old_Col" was declared but never referenced
+main.c(292): warning:  #550-D: variable "cur_Raw" was set but never used
+main.c(294): warning:  #177-D: variable "sample" was declared but never referenced
+main.c(323): warning:  #177-D: variable "i" was declared but never referenced
+main.c(323): warning:  #177-D: variable "j" was declared but never referenced
+main.c(371): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(371): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(486): warning:  #223-D: function "SysTickIntDisable" declared implicitly
+main.c(487): warning:  #223-D: function "SysTickDisable" declared implicitly
+linking...
+Program Size: Code=8452 RO-data=1280 RW-data=4476 ZI-data=25412  
+".\LCD.axf" - 0 Errors, 21 Warning(s).
+Load "C:\\Users\\kohill\\Desktop\\flappybird\\LCD.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+compiling LCDDriver.c...
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(564): warning:  #2532-D: support for trigraphs is disabled
+assembling Startup.s...
+compiling main.c...
+main.c(104): warning:  #223-D: function "SysTickIntEnable" declared implicitly
+main.c(185): warning:  #177-D: variable "i" was declared but never referenced
+main.c(273): warning:  #223-D: function "SysTickPeriodSet" declared implicitly
+main.c(275): warning:  #223-D: function "SysTickEnable" declared implicitly
+main.c(276): warning:  #223-D: function "SysTickPeriodGet" declared implicitly
+main.c(293): warning:  #177-D: variable "old_Raw" was declared but never referenced
+main.c(293): warning:  #177-D: variable "old_Col" was declared but never referenced
+main.c(295): warning:  #550-D: variable "cur_Raw" was set but never used
+main.c(297): warning:  #177-D: variable "sample" was declared but never referenced
+main.c(325): warning:  #177-D: variable "i" was declared but never referenced
+main.c(325): warning:  #177-D: variable "j" was declared but never referenced
+main.c(373): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(373): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(488): warning:  #223-D: function "SysTickIntDisable" declared implicitly
+main.c(489): warning:  #223-D: function "SysTickDisable" declared implicitly
+linking...
+Program Size: Code=8472 RO-data=1280 RW-data=4476 ZI-data=25412  
+".\LCD.axf" - 0 Errors, 21 Warning(s).
+Load "C:\\Users\\kohill\\Desktop\\flappybird\\LCD.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+compiling LCDDriver.c...
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(564): warning:  #2532-D: support for trigraphs is disabled
+assembling Startup.s...
+compiling main.c...
+main.c(98): warning:  #223-D: function "SysTickIntEnable" declared implicitly
+main.c(186): warning:  #177-D: variable "i" was declared but never referenced
+main.c(274): warning:  #223-D: function "SysTickPeriodSet" declared implicitly
+main.c(276): warning:  #223-D: function "SysTickEnable" declared implicitly
+main.c(277): warning:  #223-D: function "SysTickPeriodGet" declared implicitly
+main.c(294): warning:  #177-D: variable "old_Raw" was declared but never referenced
+main.c(294): warning:  #177-D: variable "old_Col" was declared but never referenced
+main.c(296): warning:  #550-D: variable "cur_Raw" was set but never used
+main.c(298): warning:  #177-D: variable "sample" was declared but never referenced
+main.c(327): warning:  #177-D: variable "i" was declared but never referenced
+main.c(327): warning:  #177-D: variable "j" was declared but never referenced
+main.c(375): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(375): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(490): warning:  #223-D: function "SysTickIntDisable" declared implicitly
+main.c(491): warning:  #223-D: function "SysTickDisable" declared implicitly
+linking...
+Program Size: Code=8476 RO-data=1280 RW-data=4476 ZI-data=25412  
+".\LCD.axf" - 0 Errors, 21 Warning(s).
+Load "C:\\Users\\kohill\\Desktop\\flappybird\\LCD.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+compiling LCDDriver.c...
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(564): warning:  #2532-D: support for trigraphs is disabled
+assembling Startup.s...
+compiling main.c...
+main.c(98): warning:  #223-D: function "SysTickIntEnable" declared implicitly
+main.c(186): warning:  #177-D: variable "i" was declared but never referenced
+main.c(274): warning:  #223-D: function "SysTickPeriodSet" declared implicitly
+main.c(276): warning:  #223-D: function "SysTickEnable" declared implicitly
+main.c(277): warning:  #223-D: function "SysTickPeriodGet" declared implicitly
+main.c(345): error:  #75: operand of "*" must be a pointer
+main.c(345): warning:  #61-D: integer operation result is out of range
+main.c(294): warning:  #177-D: variable "old_Raw" was declared but never referenced
+main.c(294): warning:  #177-D: variable "old_Col" was declared but never referenced
+main.c(296): warning:  #550-D: variable "cur_Raw" was set but never used
+main.c(298): warning:  #177-D: variable "sample" was declared but never referenced
+main.c(327): warning:  #177-D: variable "i" was declared but never referenced
+main.c(327): warning:  #177-D: variable "j" was declared but never referenced
+main.c(375): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(375): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(490): warning:  #223-D: function "SysTickIntDisable" declared implicitly
+main.c(491): warning:  #223-D: function "SysTickDisable" declared implicitly
+".\LCD.axf" - 1 Errors, 22 Warning(s).
+Target not created
+Rebuild target 'Target 1'
+compiling LCDDriver.c...
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(378): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(382): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+LCDDriver.c(564): warning:  #2532-D: support for trigraphs is disabled
+assembling Startup.s...
+compiling main.c...
+main.c(98): warning:  #223-D: function "SysTickIntEnable" declared implicitly
+main.c(186): warning:  #177-D: variable "i" was declared but never referenced
+main.c(274): warning:  #223-D: function "SysTickPeriodSet" declared implicitly
+main.c(276): warning:  #223-D: function "SysTickEnable" declared implicitly
+main.c(277): warning:  #223-D: function "SysTickPeriodGet" declared implicitly
+main.c(345): warning:  #61-D: integer operation result is out of range
+main.c(294): warning:  #177-D: variable "old_Raw" was declared but never referenced
+main.c(294): warning:  #177-D: variable "old_Col" was declared but never referenced
+main.c(296): warning:  #550-D: variable "cur_Raw" was set but never used
+main.c(298): warning:  #177-D: variable "sample" was declared but never referenced
+main.c(327): warning:  #177-D: variable "i" was declared but never referenced
+main.c(327): warning:  #177-D: variable "j" was declared but never referenced
+main.c(375): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(375): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(490): warning:  #223-D: function "SysTickIntDisable" declared implicitly
+main.c(491): warning:  #223-D: function "SysTickDisable" declared implicitly
+linking...
+Program Size: Code=8492 RO-data=1280 RW-data=4476 ZI-data=25412  
+".\LCD.axf" - 0 Errors, 22 Warning(s).
+Load "C:\\Users\\kohill\\Desktop\\flappybird\\LCD.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
