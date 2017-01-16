@@ -11,8 +11,8 @@
 #include "inc/tm4c123gh6pm.h"
 void led_init(void) {
 	SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOF;
-	GPIO_PORTF_DIR_R |= (LED1_BIT)|(LED2_BIT)|(LED3_BIT);
-	GPIO_PORTF_DEN_R |= (LED1_BIT)|(LED2_BIT)|(LED3_BIT);
+	GPIO_PORTF_DIR_R |= (red|blue|green);
+	GPIO_PORTF_DEN_R |= (red|blue|green);
 }
 
 bool ledIsOn(LED led) {

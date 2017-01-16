@@ -15,18 +15,20 @@ void delay() {
 }
 void Delay() {
 	int i = 0;
-	for (i = 0; i < 1; i++)
+	for (i = 0; i < 0xfff; i++)
 		;
 }
 void led1_task() {
 	static bool _islight = true;
 	while (1) {
 		if(_islight){
+			delay();
 			ledClose(red);
 			_islight =!_islight;
 			delay();
 		}
 		else{
+			delay();
 			_islight =!_islight;
 			ledOpen(red);
 			delay();
@@ -51,6 +53,15 @@ void led2_task() {
 void led3_task() {
 	static bool _islight = true;
 	while (1) {
-		ledOpen(red);
-	}
+		if(_islight){
+			ledClose(blue);
+			_islight =!_islight;
+			delay();
+		}
+		else{
+			_islight =!_islight;
+			ledOpen(blue);
+			delay();
+		}
+	};
 }

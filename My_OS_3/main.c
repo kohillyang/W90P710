@@ -28,14 +28,7 @@
 #include "systick.h"
 
 void Led_handler() {
-	static bool isOpen = false;
-	if (!isOpen) {
-//		ledOpen(green);
-		isOpen = true;
-	} else {
-		ledClose(green);
-		isOpen = false;
-	}
+
 }
 int main(void) {
 	led_init();

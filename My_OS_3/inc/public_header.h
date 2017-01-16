@@ -24,6 +24,6 @@
 #include "driverlib/interrupt.h"
 #include <driverlib/systick.h>
 #include <driverlib/timer.h>
-
+#include <driverlib/adc.h>
 
 #endif /* PUBLIC_HEADER_H_ */
