@@ -191,6 +191,7 @@ uint8_t flag, i=0;
 	LEDALL_OFF;
 	MPU6050_Init();					//6050初始化
 	SPI1_INIT();						//SPI初始化，用于nRF模块
+	NRF24L01_INIT();
 	flag = NRF_CHECK();			//检查NRF模块是否正常工作
 	if(flag != 1)
 	{
