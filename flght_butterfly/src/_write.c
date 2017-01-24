@@ -28,21 +28,20 @@
 
 ssize_t
 _write (int fd, const char* buf, size_t nbyte);
-
+#include <NRF24L01.h>
 ssize_t
 _write (int fd __attribute__((unused)), const char* buf __attribute__((unused)),
 	size_t nbyte __attribute__((unused)))
 {
-#if defined(TRACE)
-  // STDOUT and STDERR are routed to the trace device
-  if (fd == 1 || fd == 2)
-    {
-      return trace_write (buf, nbyte);
-    }
-#endif // TRACE
-
-  errno = ENOSYS;
-  return -1;
+//	SetTX_Mode();
+//	if(nbyte >32){
+//		NRF_TxPacket(buf,32);
+//		delay_ms(1);
+//		_write(fd,buf,nbyte-32);
+//	}else{
+//		NRF_TxPacket(buf,nbyte);
+//	}
+	return nbyte;
 }
 
 // ----------------------------------------------------------------------------

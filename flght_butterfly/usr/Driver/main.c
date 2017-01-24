@@ -191,7 +191,6 @@ uint8_t flag, i=0;
 	LEDALL_OFF;
 	MPU6050_Init();					//6050初始化
 	SPI1_INIT();						//SPI初始化，用于nRF模块
-	NRF24L01_INIT();
 	flag = NRF_CHECK();			//检查NRF模块是否正常工作
 	if(flag != 1)
 	{
@@ -204,9 +203,20 @@ uint8_t flag, i=0;
 		}
 	}
 	NRF24L01_INIT();						//nRF初始化
-	SetRX_Mode();								//设置为接收模式
 	NRF24L01_INIT();						//nRF初始化
 	NRF_GPIO_Interrupt_Init();	//nRF使用的外部中断的引脚初始化
+	while(1){
+		SetTX_Mode();
+		static int i=0;
+		i++;
+		char buf[32];
+		int size = sprintf(buf,"%32d",i);
+		NRF_TxPacket(buf,size);
+		delay_ms(200);
+		LED2_OFF;
+		delay_ms(200);
+		LED2_ON;
+	}
 	tim4_init();								//定时中断，作为系统的控制频率	
 	adcInit();									//ADC初始化，测量电池电压
 }

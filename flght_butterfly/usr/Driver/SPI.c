@@ -76,12 +76,14 @@ void SPI1_INIT(void)
 }
 u8 SPI_RW(u8 dat) 
 { 
+	int32_t delay_count;
 	/* 当 SPI发送缓冲器非空时等待 */ 
-	while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET); 
+#define waitIf(x) {	delay_count=10000;	while(x){delay_count--;	if(delay_count<=0){while(1);}}}
+	waitIf((SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET));
 	/* 通过 SPI2发送一字节数据 */ 
 	SPI_I2S_SendData(SPI1, dat); 
 	/* 当SPI接收缓冲器为空时等待 */ 
-	while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE) == RESET); 
+	waitIf (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE) == RESET);
 	/* Return the byte read from the SPI bus */ 
 	return SPI_I2S_ReceiveData(SPI1); 
 }

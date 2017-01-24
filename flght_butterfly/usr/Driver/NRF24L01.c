@@ -100,7 +100,7 @@ uint8_t NRF_Read_Buf(uint8_t reg, uint8_t *pBuf, uint8_t uchars)
 /******************************************************************
 * 写数据包
 ******************************************************************/
-void NRF_TxPacket(uint8_t * tx_buf, uint8_t len)
+void NRF_TxPacket(const uint8_t * tx_buf, uint8_t len)
 {	
 	SPI_CE_L();		 //StandBy I模式	
 	NRF_Write_Buf(WR_TX_PLOAD, tx_buf, len); 			 // 装载数据	
@@ -128,16 +128,17 @@ u8 NRF_CHECK(void)
 void NRF24L01_INIT(void)
 {
 	SPI_CE_L();
-	NRF_Write_Buf(NRF_WRITE_REG+RX_ADDR_P0,RX_ADDRESS,RX_ADR_WIDTH);//写RX节点地址 
-	//NRF_Write_Buf(NRF_WRITE_REG+TX_ADDR,TX_ADDRESS,TX_ADR_WIDTH); //写TX节点地址  
-	NRF_Write_Reg(NRF_WRITE_REG+EN_AA,0x01); //使能通道0的自动应答 
-	NRF_Write_Reg(NRF_WRITE_REG+EN_RXADDR,0x01);//使能通道0的接收地址 
-	//NRF_Write_Reg(NRF_WRITE_REG+SETUP_RETR,0x1a);//设置自动重发间隔时间:500us + 86us;最大自动重发次数:10次 
+	unsigned char rtaddr[]={0x01,0x02,0x03,0x02,0x01};
+//	NRF_Write_Buf(NRF_WRITE_REG+RX_ADDR_P0,rtaddr,sizeof(rtaddr));//写RX节点地址
+	NRF_Write_Buf(NRF_WRITE_REG+TX_ADDR,rtaddr,sizeof(rtaddr)); //写TX节点地址
+	NRF_Write_Reg(NRF_WRITE_REG+EN_AA,0x00); //关闭通道0的自动应答
+	NRF_Write_Reg(NRF_WRITE_REG+EN_RXADDR,0x00);//使能通道0
+	NRF_Write_Reg(NRF_WRITE_REG+SETUP_RETR,0x00);//关闭自动重发
 	NRF_Write_Reg(NRF_WRITE_REG+RF_CH,40); //设置RF通道为CHANAL
 	NRF_Write_Reg(NRF_WRITE_REG+RX_PW_P0,RX_PLOAD_WIDTH);//选择通道0的有效数据宽度 
-	NRF_Write_Reg(NRF_WRITE_REG+RF_SETUP,0x26); //设置TX发射参数,0db增益,2Mbps,低噪声增益开启
-
-	NRF_Write_Reg(NRF_WRITE_REG + CONFIG, 0x0f);   		 // IRQ收发完成中断响应，16位CRC，主接收
+	NRF_Write_Reg(NRF_WRITE_REG+RF_SETUP,0x0f);
+	NRF_Write_Reg(NRF_WRITE_REG+SETUP_AW,0x03);  //总共5byes地址
+	NRF_Write_Reg(NRF_WRITE_REG + CONFIG, 0x0e);   		 // IRQ收发完成中断响应，16位CRC，主发送
 	
 	SPI_CE_H();
 }

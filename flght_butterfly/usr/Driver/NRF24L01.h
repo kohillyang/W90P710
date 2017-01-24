@@ -51,7 +51,7 @@ void NRF24L01_INIT(void);
 void SetRX_Mode(void);
 void SetTX_Mode(void);
 u8 NRF_CHECK(void);
-void NRF_TxPacket(uint8_t * tx_buf, uint8_t len);
+void NRF_TxPacket(const uint8_t * tx_buf, uint8_t len);
 uint8_t NRF_RxPacket(uint8_t * rx_buf, uint8_t len);
 uint8_t NRF_Write_Reg(uint8_t reg, uint8_t value);
 uint8_t NRF_Read_Reg(uint8_t reg);
