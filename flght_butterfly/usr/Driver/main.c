@@ -67,10 +67,8 @@ void INSPAIRE()//这是主函数的while(1)
 	{
 		LEDALL_ON;
 		//输出调试信息，分别是横滚，俯仰，偏航角度
-		printf("angle_roll:%f\r\n", w_and_angle.angle_roll);
-		printf("angle_pitch:%f\r\n", w_and_angle.angle_pitch);
-		printf("angle_yaw:%f\r\n", w_and_angle.angle_yaw);
-		delay_Ms_Loop(2);
+		printf("%f %f %f\r\n", w_and_angle.angle_roll,w_and_angle.angle_pitch,w_and_angle.angle_yaw);
+		delay_Ms_Loop(20);
 		MPU_counter ++;
 		if(MPU_counter%20 == 0) //运行系统电压检测
 		{				
@@ -103,9 +101,9 @@ int main(void)
 		delay_Ms_Loop(3000);
 		LEDALL_OFF;
 		//输出调试信息，分别是横滚，俯仰，偏航角度
-		printf("angle_roll:%f\r\n", w_and_angle.angle_roll);
-		printf("angle_pitch:%f\r\n", w_and_angle.angle_pitch);
-		printf("angle_yaw:%f\r\n", w_and_angle.angle_yaw);		
+		printf("roll:%f ", w_and_angle.angle_roll);
+		printf("pitch:%f ", w_and_angle.angle_pitch);
+		printf(":%f\r\n", w_and_angle.angle_yaw);
 		
 		yaw_now = w_and_angle.angle_yaw;
 		if( (fabs(yaw_now - yaw_pre) > 0.9) || (yaw_now == 0) )
@@ -194,29 +192,19 @@ uint8_t flag, i=0;
 	flag = NRF_CHECK();			//检查NRF模块是否正常工作
 	if(flag != 1)
 	{
-		while(1)
-		{
-			LEDALL_OFF;
-			delay_Ms_Loop(200);
-			LEDALL_ON;
-			delay_Ms_Loop(200);
-		}
+//		while(1)
+//		{
+//			LEDALL_OFF;
+//			delay_Ms_Loop(200);
+//			LEDALL_ON;
+//			delay_Ms_Loop(200);
+//		}
 	}
 	NRF24L01_INIT();						//nRF初始化
 	NRF24L01_INIT();						//nRF初始化
 	NRF_GPIO_Interrupt_Init();	//nRF使用的外部中断的引脚初始化
-	while(1){
-		SetTX_Mode();
-		static int i=0;
-		i++;
-		char buf[32];
-		int size = sprintf(buf,"%32d",i);
-		NRF_TxPacket(buf,size);
-		delay_ms(200);
-		LED2_OFF;
-		delay_ms(200);
-		LED2_ON;
-	}
+	extern void tim1_init();
+	tim1_init(); 	//中断方式检查是否有待发送数据，每5ms读取一次
 	tim4_init();								//定时中断，作为系统的控制频率	
 	adcInit();									//ADC初始化，测量电池电压
 }
